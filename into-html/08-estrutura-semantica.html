@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Semântica | HTML</title>
+
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #f2f2f2;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header, footer{
+            background-color: aqua;
+           
+        }
+        section{
+            background-color: deeppink;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- header = representa o cabeçalho da página. Geralmente contém título, logo e navegação. -->
+    <header>
+        <h1>Estrutura Semântica</h1>
+
+        <!-- nav = representa uma área de navegação, geralmente contendo os principais links da página. -->
+        <nav>
+            <a href="">Início</a>
+            <a href="">Sobre</a>
+            <a href="">Contato</a>
+            <a href="">Carreiras</a>
+        </nav>
+    </header>
+
+    <!-- main = representa o conteúdo principal da página. Devemos ter apenas um conteúdo principal por página. -->
+    <main>
+
+        <!-- section = representa uma seção temática, agrupando conteúdos relacionados a um mesmo assunto. -->
+        <section>
+            <h2>Sobre o elemento section</h2>
+            <p>Representa uma seção temática do conteúdo</p>
+        </section>
+
+        <!-- Podemos utilizar várias sections quando a página possui diferentes assuntos ou áreas de conteúdo. -->
+        <section>
+            <h2>Experiência</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam odio voluptate aspernatur reprehenderit. Saepe accusamus iste iusto perferendis fugit at possimus consectetur temporibus, obcaecati laudantium earum nisi vero quod illum.</p>
+        </section>
+
+        <!-- Esta section agrupa especificamente o conteúdo relacionado aos projetos. -->
+        <section>
+            <h2>Projetos</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quam laborum blanditiis quo omnis, assumenda officiis quia magnam odit perspiciatis voluptatem fugit dolore a quasi. Officiis, eveniet? Similique, laborum dolorum!</p>
+        </section>
+
+    <article>
+        <h2>Sobre o elemento article</h2>
+
+        <p>
+        Representa um conteúdo <em>autocontido</em> e potencialmente
+        <em>independente</em>.
+        </p>
+
+        <h3>Exemplos:</h3>
+
+        <ul>
+            <li>Notícias</li>
+            <li>Comentários</li>
+            <li>Card de projeto</li>
+            <li>Postagem de blog</li>
+        </ul>
+    </article>
+
+    <section>
+        <h2> ÚLtimas noticias</h2>
+        <article>
+            <h3> Novo projeto lançado </h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis dolore laudantium, cupiditate repellat expedita iste qui illum perspiciatis doloribus placeat inventore alias eos? Sunt, praesentium. Fugit molestias exercitationem non quis?</p>
+        </article>
+
+        <article>
+            <h3>Titulo importante</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum consequuntur ex quasi at nam explicabo vitae cupiditate delectus nemo atque repellendus, a mollitia! Delectus, deleniti dolor fuga exercitationem reprehenderit explicabo.</p>
+        </article>
+
+    </section>
+
+        <aside>
+            <h2>Resumo da Aula </h2>
+            <ul>
+                <li>Falamos Details</li>
+                <li>Details com faq</li>
+                <li>Sobre o header</li>
+                <li>Sobre o nav</li>
+                <li>Sobre o main</li>
+                <li>Sobre o section</li>
+                <li>Sobre o article</li>
+                <li>Sobre o aside</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p> &copy; 2026 - Vagner</p>
+        <nav>
+            <h2> Links úteis </h2>
+            <ul>
+                <li> <a href=""> Sobre </a> </li>
+                <li> <a href=""> Contato </a> </li>
+                <li> <a href=""> Politica de privacidade </a> </li>
+            </ul>
+        </nav>
+            <!--adress fala de meios de contato-->
+        <address>
+            <h2> Entre em Contato</h2>
+            <a href="mailto:vagnereduardojunior@gmail.com">vagnereduardojunior@gmail.com</a>
+            <a href="tel:+5511933898768"> +55 (11) 93389-8768</a>
+            <p>Avenida Prefeito Angelo Celeguim, Portal das Alamedas - Franco da Rocha/SP</p>
+        </address>
+
+
+    </footer>
+
+
+</body>
+</html>

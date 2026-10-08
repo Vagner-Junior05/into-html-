@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conhecendo a estrutura do elemento de formulário no HTML5.">
+    <title>Sobre formulários | HTML</title>
+
+        <style>
+            body {
+        font-family: sans-serif;
+        background-color: #1c1c1c;
+        color: #f5f5f5;
+        }
+
+    section {
+        background-color: #2b2b2b;
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        }
+        fieldset {
+            background-color: aqua;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Formulários HTML</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que são Formulários no HTML?</h2>
+
+            <p>Os formulários são uma das partes mais importantes do HTML pois ajudam a introduzir uma ideia diferente.</p>
+            <p>O usuário deixa de apenas consumir conteúdo e passa a fornecer dados para o sistema.</p>
+            <p>Um formulário, de forma resumida, é uma área da página destinada à coleta de informações.</p>
+            <p>Exemplos de uso:</p>
+
+            <ul>
+                <li>Login</li>
+                <li>Cadastro</li>
+                <li>Contato</li>
+                <li>Pesquisa</li>
+                <li>Comentários</li>
+                <li>Endereço</li>
+                <li>Inscrições em Newsletter</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Criando um formulário básico</h2>
+
+            <form action="">
+                <!-- form agrupa os campos do formulário. action indica para onde os dados serão enviados. -->
+
+                <label for="nome">Nome</label>
+                <!-- label é o rótulo do campo. O for deve possuir o mesmo valor do id do input. -->
+
+                <input type="text" id="nome">
+                <!-- input cria o campo. type="text" recebe texto e id identifica o campo. -->
+
+                <button>Enviar</button>
+                <!-- button cria um botão para realizar uma ação no formulário. -->
+            </form>
+
+            <ul>
+                <li>&lt;label&gt;: Representa um rótulo/etiqueta para um campo. É um recurso fundamental para a acessibilidade.</li>
+                <li><strong>for</strong>: Conecta o label ao campo através do id do input.</li>
+                <li><strong>id</strong>: Identifica de forma única um elemento dentro da página.</li>
+                <li><strong>type</strong>: Define o tipo de input apresentado ao usuário com base no dado que queremos coletar.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Explorando o formulário</h2>
+
+            <form>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="ana@exemplo.com" required>
+                <!-- type="email" recebe e-mail. placeholder mostra uma dica e required torna o campo obrigatório. -->
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="********" maxlength="20">
+                <!-- type="password" oculta os caracteres. maxlength limita a quantidade máxima de caracteres. -->
+
+                <label for="contato">Seu WhatsApp</label>
+                <input type="tel" id="contato" name="contato" placeholder="(11) 99999-9999">
+                <!-- type="tel" é utilizado para telefone ou celular. -->
+
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Empresa">
+                <!-- type="text" recebe informações de texto comuns. -->
+
+                <label for="documento">Documento</label>
+                <input type="text" id="documento" name="documento" placeholder="Insira seu CPF ou CNPJ">
+                <!-- CPF e CNPJ podem utilizar type="text", pois são identificadores e não valores para cálculos. -->
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Vamos tomar um café?" cols="40" rows="10" maxlength="400"></textarea>
+                <!-- textarea recebe textos maiores. cols define a largura, rows a altura e maxlength limita os caracteres. -->
+
+                <label for="newsletter">Quer receber novidades por e-mail</label>
+                <input type="checkbox" name="newsletter" id="newsletter">
+                <!-- type="checkbox" cria uma caixa que pode ser marcada ou desmarcada. -->
+
+                <button>Entrar</button>
+
+                <p>Esqueceu sua senha? <a href="https://www.nike.com.br/" target="_blank">Clique aqui!</a></p>
+                <!-- target="_blank" faz o link abrir em uma nova aba. -->
+            </form>
+        </section>
+
+        <section>
+            <h2>Formulários agrupados</h2>
+
+            <form action="">
+                <fieldset>
+                    <!-- fieldset agrupa campos que possuem relação entre si. -->
+
+                    <legend>Dados pessoais</legend>
+                    <!-- legend funciona como o título do grupo criado pelo fieldset. -->
+
+                    <label for="nome-pessoal">Nome</label>
+                    <input type="text" name="nome" id="nome-pessoal" placeholder="Ex: Vagner Junior" required><br>
+                    <!-- type="text" recebe textos comuns. -->
+
+                    <label for="email-pessoal">E-mail</label>
+                    <input type="email" name="email" id="email-pessoal" placeholder="ana@exemplo.com" required><br>
+                    <!-- type="email" é utilizado para endereços de e-mail. -->
+
+                    <label for="senha-pessoal">Senha</label>
+                    <input type="password" name="senha" id="senha-pessoal" placeholder="********" required><br>
+                    <!-- type="password" oculta visualmente os caracteres digitados. -->
+
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" name="nascimento" id="nascimento"><br>
+                    <!-- type="date" cria um campo específico para selecionar uma data. -->
+
+                    <label for="idade">Idade</label>
+                    <input type="number" name="idade" id="idade" placeholder="18" min="16" max="100" required><br>
+                    <!-- type="number" recebe números. min e max definem os valores mínimo e máximo permitidos. -->
+
+                    <label for="telefone">Telefone de contato</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(11) 99999-9999"><br>
+                    <!-- type="tel" é apropriado para telefone e celular. -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco"><br>
+                    <!-- type="text" pode ser utilizado para rua, avenida e outras informações de endereço. -->
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Resumo dos elementos e atributos</h2>
+
+            <ul>
+                <li><strong>&lt;form&gt;</strong>: Agrupa os campos que fazem parte de um formulário.</li>
+                <li><strong>&lt;label&gt;</strong>: É o rótulo que informa ao usuário o que deve ser preenchido.</li>
+                <li><strong>for</strong>: Conecta o label ao campo que possui o id correspondente.</li>
+                <li><strong>&lt;input&gt;</strong>: Cria um campo para entrada de dados.</li>
+                <li><strong>type</strong>: Define o tipo de dado que será recebido pelo input.</li>
+                <li><strong>id</strong>: Identifica o elemento de forma única na página.</li>
+                <li><strong>name</strong>: Identifica o dado quando as informações do formulário são enviadas.</li>
+                <li><strong>placeholder</strong>: Mostra uma dica ou exemplo dentro do campo.</li>
+                <li><strong>required</strong>: Torna o preenchimento do campo obrigatório.</li>
+                <li><strong>maxlength</strong>: Define a quantidade máxima de caracteres permitidos.</li>
+                <li><strong>min</strong>: Define o menor valor permitido.</li>
+                <li><strong>max</strong>: Define o maior valor permitido.</li>
+                <li><strong>&lt;textarea&gt;</strong>: Cria uma área para textos maiores.</li>
+                <li><strong>cols</strong>: Define aproximadamente a largura visível do textarea.</li>
+                <li><strong>rows</strong>: Define a quantidade de linhas visíveis do textarea.</li>
+                <li><strong>&lt;fieldset&gt;</strong>: Agrupa campos relacionados.</li>
+                <li><strong>&lt;legend&gt;</strong>: Cria o título/legenda de um fieldset.</li>
+                <li><strong>&lt;button&gt;</strong>: Cria um botão dentro do formulário.</li>
+            </ul>
+
+            <h3>Principais tipos de input</h3>
+
+            <ul>
+                <li><strong>type="text"</strong>: Nome, empresa, endereço, CPF, CNPJ e textos em geral.</li>
+                <li><strong>type="email"</strong>: Endereço de e-mail.</li>
+                <li><strong>type="password"</strong>: Senhas.</li>
+                <li><strong>type="tel"</strong>: Telefone ou celular.</li>
+                <li><strong>type="number"</strong>: Valores numéricos.</li>
+                <li><strong>type="date"</strong>: Datas.</li>
+                <li><strong>type="checkbox"</strong>: Caixa de seleção.</li>
+            </ul>
+
+            <!--
+                Relação mais importante para lembrar:
+
+                <label for="email">  <---->  <input id="email">
+
+                label = informa o que deve ser preenchido
+                for = conecta o label ao campo
+                input = campo onde o usuário fornece o dado
+                type = define o tipo do campo
+                id = identifica o campo
+                name = identifica o dado enviado
+                placeholder = mostra uma dica dentro do campo
+                required = torna o campo obrigatório
+                maxlength = limita a quantidade de caracteres
+            -->
+        </section>
+    </main>
+</body>
+
+</html>

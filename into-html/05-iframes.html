@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conteúdo sobre o uso e aplicação de iframes no HTML.">
+    <title>Sobre iframes - HTML</title>
+</head>
+
+<body>
+    <h1>O que é um Iframe?</h1>
+
+    <p>Iframe significa <strong>inline frame</strong>.</p>
+
+    <p>Ele permite que você <em>incorpore</em> outra página/documento dentro da sua própria página HTML.</p>
+
+    <hr>
+
+    <h2>Criando um iframe básico</h2>
+
+    <!--
+        O iframe permite incorporar outro documento dentro da página atual.
+
+        src = indica o caminho ou endereço do conteúdo que será carregado.
+        frameborder = controla a borda do iframe. O valor 0 remove a borda.
+        width = define a largura do iframe.
+        height = define a altura do iframe.
+    -->
+    <iframe
+        src="03-listas.html"
+        frameborder="0"
+        width="500"
+        height="600">
+    </iframe>
+
+    <hr>
+
+    <h2>Explorando outras formas de trabalhar com o iframe</h2>
+
+    <h3>Incorporando o YouTube</h3>
+
+    <!--
+        Podemos utilizar iframe para incorporar vídeos do YouTube.
+
+        width = define a largura do vídeo.
+        height = define a altura do vídeo.
+        src = endereço do vídeo que será incorporado.
+        title = descreve o conteúdo do iframe e auxilia na acessibilidade.
+        frameborder="0" = remove a borda.
+        allow = define quais recursos o conteúdo incorporado pode utilizar.
+        referrerpolicy = controla informações de referência enviadas pelo navegador.
+        allowfullscreen = permite visualizar o vídeo em tela cheia.
+    -->
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/pfEy4BNeJdw?si=rUyYn9VBuCB0STPO"
+        title="Vídeo explicando como fazer um site."
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+    <h3>Incorporando um mapa no site</h3>
+
+    <!--
+        Também podemos utilizar iframe para incorporar mapas.
+
+        src = endereço do mapa incorporado.
+        width = define a largura do mapa.
+        height = define a altura do mapa.
+        style="border:0;" = remove a borda.
+        allowfullscreen = permite tela cheia quando disponível.
+        loading="lazy" = adia o carregamento até o mapa estar próximo da área visível.
+        referrerpolicy = controla informações de referência enviadas ao conteúdo externo.
+    -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1790289690327!6m8!1m7!1sOLRzz4TquUZvk0-n6L_Yxw!2m2!1d-23.31905603881283!2d-46.74508134330159!3f78.94!4f0!5f0.7820865974627469"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+</body>
+</html>
